@@ -1,0 +1,4 @@
+name: AdagraPlugin
+version: '${project.version}'
+main: me.hibatica.adagraplugin.AdagraPlugin
+api-version: '1.20'

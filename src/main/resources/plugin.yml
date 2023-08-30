@@ -2,3 +2,18 @@ name: AdagraPlugin
 version: '${project.version}'
 main: me.hibatica.adagraplugin.AdagraPlugin
 api-version: '1.20'
+
+commands:
+  duel:
+    usage: /duel Player name || /duel accept PlayerName || /duel deny PlayerName
+    description: Duel a player
+  duelstats:
+    usage: /duelstats || /duelstats PlayerName
+    description: Get a players dueling stats
+  duelstop:
+    usage: /duelstop
+    description: Stop your current duel (you will loose)
+
+  permissions:
+    adagraplugin.duel:
+      description: Allow a player to use the duel module

@@ -2,23 +2,23 @@ package me.hibatica.adagraplugin.playermanager;
 
 import me.hibatica.adagraplugin.AdagraPlayer;
 import me.hibatica.adagraplugin.AdagraPlugin;
-import me.hibatica.adagraplugin.playerdata.PlayerDataStorage;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class AdagraPlayerManager {
+public class PlayerManager {
     private static AdagraPlugin plugin;
 
     private static HashMap<String, AdagraPlayer> players;
 
     public static void init(AdagraPlugin plugin) {
-        AdagraPlayerManager.plugin = plugin;
+        PlayerManager.plugin = plugin;
         players = new HashMap<>();
     }
 
     public static void shutdown() {
+        if(players.isEmpty()) return;
+
         for(String key : players.keySet()) {
             players.remove(key);
         }
